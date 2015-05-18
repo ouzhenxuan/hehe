@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/ed_userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:ems="10"
+                android:hint="name"
+                android:width="150dp" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/ed_telnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ed_userName"
+                android:layout_alignBottom="@+id/ed_userName"
+                android:layout_alignParentRight="true"
+                android:ems="10"
+                android:hint="电话号码"
+                android:width="150dp" />
+
+            <Button
+                android:id="@+id/btn_insterData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ed_userName"
+                android:text="插入数据" />
+
+            <EditText
+                android:id="@+id/ed_new_updata_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/btn_insterData"
+                android:ems="10"
+                android:hint="要更新的name"
+                android:width="150dp" />
+
+            <EditText
+                android:id="@+id/ed_new_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ed_telnum"
+                android:layout_below="@+id/btn_insterData"
+                android:ems="10"
+                android:hint="新的phone"
+                android:width="150dp" />
+
+            <Button
+                android:id="@+id/btn_updata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ed_new_updata_name"
+                android:layout_centerHorizontal="true"
+                android:text="更新" />
+
+            <EditText
+                android:id="@+id/ed_oldname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/btn_updata"
+                android:ems="10"
+                android:hint="oldName" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ed_oldname"
+                android:text="删除" />
+
+            <Button
+                android:id="@+id/btn_readTheDate"
+                android:onClick="readDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/btn_delete"
+                android:text="查看数据库" />
+
+            <Button
+                android:id="@+id/btn_readone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ed_oldname"
+                android:text="查看" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
